@@ -24,12 +24,12 @@ public class Health : MonoBehaviour
         if (!TakeDamage)
         {
             timer += Time.deltaTime;
-            Debug.Log(timer);
+            // Debug.Log(timer);
             if (timer >= invisibilityTime)
             {
                 Debug.Log("Take Damage");
                 TakeDamage = true;
-                timer = 0f;
+                timer = 0.0f;
             }
         }
     }
