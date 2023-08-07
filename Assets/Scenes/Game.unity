@@ -843,7 +843,7 @@ Canvas:
   m_GameObject: {fileID: 1101165618}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1923559650}
   m_PlaneDistance: 0.5
   m_PixelPerfect: 0
@@ -870,7 +870,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 154871645}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1923559646}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1083,6 +1083,18 @@ MonoBehaviour:
   changeDirectionTimeMax: 3
   pauseTimeMin: 1
   pauseTimeMax: 5
+--- !u!114 &1533727151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533727149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49cafccec5af3174f8c88d6ec29a6a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1606340815
 GameObject:
   m_ObjectHideFlags: 0
@@ -2451,6 +2463,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1533727150}
+    - targetCorrespondingSourceObject: {fileID: 9018416544747162943, guid: 452a0aa88fbc053499a22a8dc01c229a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1533727151}
   m_SourcePrefab: {fileID: 100100000, guid: 452a0aa88fbc053499a22a8dc01c229a, type: 3}
 --- !u!1 &1923559645
 GameObject:
@@ -2484,7 +2500,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1101165622}
   m_Father: {fileID: 175706910}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1923559647
@@ -2710,4 +2727,3 @@ SceneRoots:
   - {fileID: 1103994670}
   - {fileID: 921828028}
   - {fileID: 1754228434}
-  - {fileID: 1101165622}

@@ -213,7 +213,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.picoxr": {
-      "version": "file:C:/Users/User/OneDrive - Singapore University of Technology and Design/GLP/TU/GamingXR/PICO Unity Integration SDK-220",
+      "version": "file:../PICO Unity Integration SDK-220",
       "depth": 0,
       "source": "local",
       "dependencies": {
