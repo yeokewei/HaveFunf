@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    
+
     //import game object
     public GameObject prefabToSpawn;
 
@@ -16,23 +16,25 @@ public class Enemy : MonoBehaviour
     public float pauseTimeMin = 1f;
     public float pauseTimeMax = 3f;
 
-    // public GameObject canvasPrefab;
-    // public int maxCanvasInstances = 9;
+    public GameObject canvasPrefab;
+    public int maxCanvasInstances = 9;
 
     private float currentAngle;
     private bool isMoving = true;
     private float directionTimer;
     private float pauseTimer;
 
-    // private float minSpawnInterval = 10f;
-    // private float maxSpawnInterval = 15f;
-    
+    private float minSpawnInterval = 10f;
+    private float maxSpawnInterval = 15f;
+
     private Transform player;
-    // private float spawnRadius = 5f; 
+    private float spawnRadius = 5f;
     private Vector3 center; // Center point of the circle
     // private float angle = 0f; // Current angle on the circle
-    // private int canvasInstanceCount = 0;
+    private int canvasInstanceCount = 0;
 
+
+    //GameObject.FindGameObjectWithTag("Enemy").transform.position;
     private void Start()
     {
         // Calculate the center point of the circle based on the object's initial position
@@ -44,12 +46,12 @@ public class Enemy : MonoBehaviour
         MoveInCircle();
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        // StartCoroutine(SpawnCanvasRoutine());
+        StartCoroutine(SpawnCanvasRoutine());
 
 
     }
 
-private void Update()
+    private void Update()
     {
         if (isMoving)
         {
@@ -73,7 +75,8 @@ private void Update()
 
                 //Spawn a prefab to throw
                 GameObject spawnedPrefab = Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
-            
+                Debug.Log("spawnedPrefab");
+
             }
         }
         else
@@ -101,42 +104,41 @@ private void Update()
         // Increment the angle to make the object move in the circle
         currentAngle += speed * Time.deltaTime;
     }
+    private IEnumerator SpawnCanvasRoutine()
+    {
+        while (canvasInstanceCount < maxCanvasInstances)
+        {
+            float spawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
+            yield return new WaitForSeconds(spawnInterval);
 
-    // private IEnumerator SpawnCanvasRoutine()
-    // {
-    //     while (canvasInstanceCount < maxCanvasInstances)
-    //     {
-    //         float spawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
-    //         yield return new WaitForSeconds(spawnInterval);
+            // Generate a random angle (in radians) for the spawn position around the player.
+            float randomAngle = Random.Range(0f, 2f * Mathf.PI);
+            Vector3 spawnPosition = player.position + new Vector3(Mathf.Cos(randomAngle), 0f, Mathf.Sin(randomAngle)) * spawnRadius;
 
-    //         // Generate a random angle (in radians) for the spawn position around the player.
-    //         float randomAngle = Random.Range(0f, 2f * Mathf.PI);
-    //         Vector3 spawnPosition = player.position + new Vector3(Mathf.Cos(randomAngle), 0f, Mathf.Sin(randomAngle)) * spawnRadius;
-
-    //         // Spawn the canvas prefab and make it face the player.
-    //         GameObject canvasInstance = Instantiate(canvasPrefab, spawnPosition, Quaternion.identity);
-    //         canvasInstance.transform.LookAt(player);
-    //         //rotate canvas along x axis 90
-    //         canvasInstance.transform.Rotate(Vector3.right, 90f);
-    //         canvasInstance.transform.position += Vector3.up;
-            
+            // Spawn the canvas prefab and make it face the player.
+            GameObject canvasInstance = Instantiate(canvasPrefab, spawnPosition, Quaternion.identity);
+            canvasInstance.transform.LookAt(player);
+            //rotate canvas along x axis 90
+            canvasInstance.transform.Rotate(Vector3.right, 90f);
+            canvasInstance.transform.position += Vector3.up;
 
 
-    //         canvasInstanceCount++;
-    //         Debug.Log("spawnnumber : " + canvasInstanceCount);
-    //     }
-    // }
+
+            canvasInstanceCount++;
+            Debug.Log("spawnnumber : " + canvasInstanceCount);
+        }
+    }
 }
-    // private void Update()
-    // {
-    //     // Increment the angle based on the time and speed
-    //     currentAngle += speed * Time.deltaTime;
+// private void Update()
+// {
+//     // Increment the angle based on the time and speed
+//     currentAngle += speed * Time.deltaTime;
 
-    //     // Calculate the new position on the circle based on the angle and radius
-    //     float x = center.x + radius * Mathf.Cos(angle);
-    //     float z = center.z + radius * Mathf.Sin(angle);
+//     // Calculate the new position on the circle based on the angle and radius
+//     float x = center.x + radius * Mathf.Cos(angle);
+//     float z = center.z + radius * Mathf.Sin(angle);
 
-    //     // Set the object's new position
-    //     transform.position = new Vector3(x, transform.position.y, z);
-    // }
+//     // Set the object's new position
+//     transform.position = new Vector3(x, transform.position.y, z);
+// }
 // }
