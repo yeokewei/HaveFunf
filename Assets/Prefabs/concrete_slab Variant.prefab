@@ -108,10 +108,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6887823c95fbb6e48931152c4ec09c71,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3872411467064546890}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6887823c95fbb6e48931152c4ec09c71,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 9129241161469953461}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6887823c95fbb6e48931152c4ec09c71,
         type: 3}
@@ -120,7 +116,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -3507278529652343426, guid: 6887823c95fbb6e48931152c4ec09c71,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8670832514788357222}
+      addedObject: {fileID: 2530623716926333601}
+    - targetCorrespondingSourceObject: {fileID: -3507278529652343426, guid: 6887823c95fbb6e48931152c4ec09c71,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3354062732092821977}
+    - targetCorrespondingSourceObject: {fileID: -3507278529652343426, guid: 6887823c95fbb6e48931152c4ec09c71,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7330611953415942662}
   m_SourcePrefab: {fileID: 100100000, guid: 6887823c95fbb6e48931152c4ec09c71, type: 3}
 --- !u!1 &4296098031449803075 stripped
 GameObject:
@@ -128,8 +132,8 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8416500546992976957}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &8670832514788357222
-MeshCollider:
+--- !u!65 &2530623716926333601
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -146,10 +150,51 @@ MeshCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3345828529247424439, guid: 6887823c95fbb6e48931152c4ec09c71, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.008632922, y: 0.015376585, z: 0.039667398}
+  m_Center: {x: -0.015075109, y: 0.0076882965, z: 0.019604465}
+--- !u!65 &3354062732092821977
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4296098031449803075}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.038797956, y: 0.015376585, z: 0.016909685}
+  m_Center: {x: 0.0000073742863, y: 0.007688297, z: 0.030983455}
+--- !u!65 &7330611953415942662
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4296098031449803075}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.018477052, y: 0.015376585, z: 0.039667398}
+  m_Center: {x: 0.010167803, y: 0.0076882965, z: 0.019604465}
 --- !u!1 &8650292790945155436 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6887823c95fbb6e48931152c4ec09c71,
@@ -168,19 +213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49cafccec5af3174f8c88d6ec29a6a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3872411467064546890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8650292790945155436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a1ef0529d0bca045881390200c33c1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageAmount: 10
 --- !u!114 &9129241161469953461
 MonoBehaviour:
   m_ObjectHideFlags: 0
