@@ -33,6 +33,10 @@ public class MFZero : MonoBehaviour
     {
 
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
+        //move position of prefab towards target position
+
+
+
         // if (rotating)
         // {
         //     // print("rotating");

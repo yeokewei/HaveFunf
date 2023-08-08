@@ -8,6 +8,10 @@ public class Enemy : MonoBehaviour
 
     //import game object
     public GameObject prefabToSpawn;
+    public GameObject prefabToSpawn2;
+    public GameObject prefabToSpawn3;
+    public GameObject prefabToSpawn4;
+    public GameObject prefabToSpawn5;
 
 
     public float speed = 5f;
@@ -82,11 +86,15 @@ public class Enemy : MonoBehaviour
                 pauseTimer = Random.Range(pauseTimeMin, pauseTimeMax);
 
                 //Set the animation trigger to attack
-                anim.SetTrigger("Attack");
+                // anim.SetTrigger("Attack");
 
 
                 //Spawn a prefab to throw
-                GameObject spawnedPrefab = Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
+                //make a list of prefabToSpawn, and choose any of them randomly
+                GameObject[] prefabs = { prefabToSpawn, prefabToSpawn2, prefabToSpawn3, prefabToSpawn4, prefabToSpawn5 };
+                int randomIndex = Random.Range(0, prefabs.Length);
+                GameObject randomPrefab = prefabs[randomIndex];
+                GameObject spawnedPrefab = Instantiate(randomPrefab, transform.position, Quaternion.identity);
 
             }
         }
