@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: Funf
   productName: HaveFunf
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -133,11 +133,8 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 0.1.0
-  preloadedAssets:
-  - {fileID: 7586018479034196606, guid: 5ddd4e4e240b2fb48af0171e5862f1f1, type: 2}
-  - {fileID: 11400000, guid: 1e4a7c1135556be478f9f5edec5c6b8c, type: 2}
-  - {fileID: 4147196219266639347, guid: e394ec4d94a4de94d8753f5001095a4b, type: 2}
+  bundleVersion: 1
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1

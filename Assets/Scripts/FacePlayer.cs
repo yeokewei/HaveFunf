@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FacePlayer : MonoBehaviour
 {
-    public bool isEnemy;
     private Vector3 playerPos;
     private Vector3 npcPos;
+    public bool isEnemy;
 
     void Start()
     {
@@ -16,6 +16,7 @@ public class FacePlayer : MonoBehaviour
         Quaternion rotation = Quaternion.LookRotation(delta);
         gameObject.transform.rotation = rotation;
     }
+
     void Update()
     {
         if (isEnemy)

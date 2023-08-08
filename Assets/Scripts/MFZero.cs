@@ -7,9 +7,8 @@ public class MFZero : MonoBehaviour
 
     public float moveSpeed = 2.5f;
     public float rotationSpeed = 5f;
+    // public float 
     public float despawnTime = 5f;
-
-    // public GameObject enemy;
 
 
     // private float timer = 0.0f;
@@ -18,24 +17,21 @@ public class MFZero : MonoBehaviour
     private Vector3 moveDirection;
     private Vector3 targetDirection;
     private Quaternion targetRotation;
-    private Vector3 startPosition;
-
 
     // private bool rotating = true;
     // private float rotationTime = 3f;
     // private float timer = 0f;
-    //get energy position 
 
     void Start()
     {
-        startPosition = GameObject.FindGameObjectWithTag("Enemy").transform.position;
         targetPosition = Vector3.zero;
-        moveDirection = (targetPosition - startPosition).normalized;
+        moveDirection = (targetPosition - transform.position).normalized;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
         // if (rotating)
         // {
