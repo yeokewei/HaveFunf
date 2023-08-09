@@ -44,7 +44,7 @@ public class Health : MonoBehaviour
             healthBar.SetHealth(curHealth);
             if (curHealth <= 0)
             {
-                Die();
+                Die();                
             }
         }
 

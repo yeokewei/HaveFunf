@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     public GameObject prefabToSpawn4;
     public GameObject prefabToSpawn5;
 
+    public AudioSource source;
+    public AudioClip evilSound;
 
     public float speed = 5f;
     public float circleRadius = 5f;
@@ -96,6 +98,7 @@ public class Enemy : MonoBehaviour
                 GameObject randomPrefab = prefabs[randomIndex];
                 GameObject spawnedPrefab = Instantiate(randomPrefab, transform.position, Quaternion.identity);
 
+                source.PlayOneShot(evilSound);
             }
         }
         else
