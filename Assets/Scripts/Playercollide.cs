@@ -21,7 +21,7 @@ public class Playercollide : MonoBehaviour
          if (health != null)
          {
             Debug.Log("Take Damage");
-            health.DamagePlayer(damageAmount);
+            health.TakeDamage(damageAmount);
             Destroy(other.gameObject);
          }
 

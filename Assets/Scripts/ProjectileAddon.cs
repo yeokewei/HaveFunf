@@ -23,10 +23,10 @@ public class ProjectileAddon : MonoBehaviour
         else
             targetHit = true;
         // check if you hit an enemy
-        Debug.Log(collision.gameObject.name );
-        if(collision.gameObject.GetComponent<BasicEnemy>() != null)
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.GetComponent<Health>() != null)
         {
-            BasicEnemy enemy = collision.gameObject.GetComponent<BasicEnemy>();
+            Health enemy = collision.gameObject.GetComponent<Health>();
 
             enemy.TakeDamage(damage);
 

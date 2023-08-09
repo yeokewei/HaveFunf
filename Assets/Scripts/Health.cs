@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
     public HealthBar healthBar;
 
     private float timer = 0f;
-    private bool TakeDamage = true;
+    private bool takenDamage = true;
 
 
     void Start()
@@ -21,30 +21,30 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        if (!TakeDamage)
+        if (!takenDamage)
         {
             timer += Time.deltaTime;
             // Debug.Log(timer);
             if (timer >= invisibilityTime)
             {
                 Debug.Log("Take Damage");
-                TakeDamage = true;
+                takenDamage = true;
                 timer = 0.0f;
             }
         }
     }
 
-    public void DamagePlayer(int damage)
+    public void TakeDamage(int damage)
     {
-        if (TakeDamage)
+        if (takenDamage)
         {
-            TakeDamage = false; //invisibility mode
+            takenDamage = false; //invisibility mode
             curHealth -= damage;
 
             healthBar.SetHealth(curHealth);
             if (curHealth <= 0)
             {
-                Die();                
+                Die();
             }
         }
 
@@ -52,7 +52,7 @@ public class Health : MonoBehaviour
 
     void Die()
     {
-        //WIP
         Debug.Log("Player died");
+        Destroy(gameObject);
     }
 }
