@@ -53,13 +53,13 @@ public class ThrowingScript : MonoBehaviour
                 Throw();
             }
         }
-        if( readyToThrow && totalThrows > 0)
-        {
+        // if( readyToThrow && totalThrows > 0)
+        // {
             
-            // Throw();
-            XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
-            grabbable.activated.AddListener(FireBullet);
-        }
+        //     // Throw();
+        //     XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
+        //     grabbable.activated.AddListener(FireBullet);
+        // }
     }
 
     public void FireBullet(ActivateEventArgs arg){ 
