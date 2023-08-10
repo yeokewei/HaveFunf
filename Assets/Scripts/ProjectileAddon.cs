@@ -10,7 +10,7 @@ public class ProjectileAddon : MonoBehaviour
 
     private bool targetHit;
 
-    public GameObject chickenPrefab;
+    // public GameObject chickenPrefab;
 
     private void Start()
     {
@@ -46,6 +46,6 @@ public class ProjectileAddon : MonoBehaviour
         // make sure projectile moves with target
         // transform.SetParent(collision.transform);
 
-        // Destroy(gameObject,6);
+        Destroy(gameObject,6);
     }
 }
