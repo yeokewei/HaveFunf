@@ -7,9 +7,7 @@ public class Side : MonoBehaviour
     // Start is called before the first frame update //import game object
     public GameObject prefabToSpawn;
     public GameObject prefabToSpawn2;
-    public GameObject prefabToSpawn3;
-    public GameObject prefabToSpawn4;
-    public GameObject prefabToSpawn5;
+
 
     public AudioSource source;
     public AudioClip evilSound;
@@ -125,25 +123,20 @@ public class Side : MonoBehaviour
         Debug.Log("Enemy attacks!");
         ChangeAnimationState(ATTACK);
 
-        GameObject[] prefabs = { prefabToSpawn, prefabToSpawn2, prefabToSpawn3, prefabToSpawn4, prefabToSpawn5 };
+        GameObject[] prefabs = { prefabToSpawn, prefabToSpawn2 };
         int randomIndex = Random.Range(0, prefabs.Length);
         GameObject randomPrefab = prefabs[randomIndex];
+
+        // Vector3 originalVector = transform.position; // Set your desired position values
+        // Quaternion rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f); // Example rotation of 180 degrees around local Y-axis
+
+        // // Rotate the vector by applying the rotation
+        // Vector3 rotatedVector = rotation * originalVector;
         GameObject spawnedPrefab = Instantiate(randomPrefab, transform.position, Quaternion.identity);
 
         source.PlayOneShot(evilSound);
     }
 
-    // private void UpdateDirection()
-    // {
-    //     if (transform.position.x < targetX)
-    //     {
-    //         movingRight = true;
-    //     }
-    //     else
-    //     {
-    //         movingRight = false;
-    //     }
-    // }
 
     private void SetRandomNextMoveTime()
     {
