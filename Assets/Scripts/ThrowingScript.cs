@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
 using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class ThrowingScript : MonoBehaviour
 {
@@ -54,11 +55,43 @@ public class ThrowingScript : MonoBehaviour
         }
         if( readyToThrow && totalThrows > 0)
         {
-            Throw();
+            
+            // Throw();
+            XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
+            grabbable.activated.AddListener(FireBullet);
         }
     }
 
+    public void FireBullet(ActivateEventArgs arg){ 
+        readyToThrow = false;
+
+        // instantiate object to throw
+        GameObject projectile = Instantiate(objectToThrow, attackPoint.position, cam.rotation);
+        // Debug.Log("Spawn Bomb");
+
+        // get rigidbody component
+        Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
+
+        // calculate direction
+        Vector3 forceDirection = cam.transform.forward;
+
+        RaycastHit hit;
+
+        if(Physics.Raycast(cam.position, cam.forward, out hit, 500f))
+        {
+            forceDirection = (hit.point - attackPoint.position).normalized;
+        }
+
+        // add force
+        Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
+
+        projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
+
+        totalThrows--;
+    }
+
     private void Throw()
+    // public void Throw(ActivateEventArgs a)
     {
         readyToThrow = false;
 
