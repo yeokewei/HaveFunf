@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -11,7 +13,7 @@ public class Health : MonoBehaviour
     public HealthBar healthBar;
 
     private float timer = 0f;
-    private bool TakeDamage = true;
+    private bool takenDamage = true;
 
 
     void Start()
@@ -21,24 +23,24 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        if (!TakeDamage)
+        if (!takenDamage)
         {
             timer += Time.deltaTime;
-            Debug.Log(timer);
+            // Debug.Log(timer);
             if (timer >= invisibilityTime)
             {
                 Debug.Log("Take Damage");
-                TakeDamage = true;
-                timer = 0f;
+                takenDamage = true;
+                timer = 0.0f;
             }
         }
     }
 
-    public void DamagePlayer(int damage)
+    public void TakeDamage(int damage)
     {
-        if (TakeDamage)
+        if (takenDamage)
         {
-            TakeDamage = false; //invisibility mode
+            takenDamage = false; //invisibility mode
             curHealth -= damage;
 
             healthBar.SetHealth(curHealth);
@@ -52,7 +54,10 @@ public class Health : MonoBehaviour
 
     void Die()
     {
-        //WIP
         Debug.Log("Player died");
+        // SceneTransitionManager.singleton.GoToSceneAsync(2);
+        SceneManager.LoadScene("Ending Scene");
+        Destroy(gameObject);
+        
     }
 }

@@ -22,19 +22,21 @@ public class MFZero : MonoBehaviour
     // private float rotationTime = 3f;
     // private float timer = 0f;
 
-    // Start is called before the first frame update
     void Start()
     {
         targetPosition = Vector3.zero;
         moveDirection = (targetPosition - transform.position).normalized;
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
+        //move position of prefab towards target position
+
+
+
         // if (rotating)
         // {
         //     // print("rotating");
@@ -53,12 +55,10 @@ public class MFZero : MonoBehaviour
         // targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
         // transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         // }
-      
-       
-        Destroy(gameObject,despawnTime );
-    
+
+        Destroy(gameObject, despawnTime);
     }
 
 
- 
+
 }
