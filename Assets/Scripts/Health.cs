@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -53,6 +55,9 @@ public class Health : MonoBehaviour
     void Die()
     {
         Debug.Log("Player died");
+        // SceneTransitionManager.singleton.GoToSceneAsync(2);
+        SceneManager.LoadScene("Ending Scene");
         Destroy(gameObject);
+        
     }
 }
