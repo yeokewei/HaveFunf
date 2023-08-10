@@ -2522,7 +2522,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ------press to shoot egg
+  m_text: ------hold to grab chicken
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6359,7 +6359,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 2061043193}
   about: {fileID: 468668564}
-  instruction: {fileID: 0}
+  instruction: {fileID: 3322633554264474979, guid: 73002bb2cf259084eb5e4e4fb83ba824,
+    type: 3}
   startButton: {fileID: 1425842248}
   aboutButton: {fileID: 473495862}
   quitButton: {fileID: 694717510}
@@ -6597,7 +6598,7 @@ PrefabInstance:
     - target: {fileID: -154787234147693464, guid: f2095029445a41945a80adc1a57e2223,
         type: 3}
       propertyPath: fadeDuration
-      value: 5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1465524589094284456, guid: f2095029445a41945a80adc1a57e2223,
         type: 3}
@@ -11944,7 +11945,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ------hold to grab chicken
+  m_text: ------press to shoot egg
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

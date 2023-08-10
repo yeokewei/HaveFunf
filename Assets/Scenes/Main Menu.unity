@@ -11040,6 +11040,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5942771545072757290, guid: 0b753960388e0c8488189b3890555417,
+        type: 3}
+      propertyPath: m_text
+      value: ------hold to grab chicken
+      objectReference: {fileID: 0}
+    - target: {fileID: 7561686663942195953, guid: 0b753960388e0c8488189b3890555417,
+        type: 3}
+      propertyPath: m_text
+      value: ------press to shoot egg
+      objectReference: {fileID: 0}
     - target: {fileID: 7877152066123370269, guid: 0b753960388e0c8488189b3890555417,
         type: 3}
       propertyPath: m_Pivot.x
