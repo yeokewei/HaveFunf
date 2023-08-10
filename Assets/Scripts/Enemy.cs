@@ -44,7 +44,6 @@ public class Enemy : MonoBehaviour
     // private float angle = 0f; // Current angle on the circle
     // private int canvasInstanceCount = 0;
     private float random;
-    private Animator anim;
 
 
     private void Start()
@@ -53,14 +52,12 @@ public class Enemy : MonoBehaviour
         // Calculate the center point of the circle based on the object's initial position
         // center = transform.position;
         // center = new Vector3(0.0f,0.0f,0.0f);
-        anim = GetComponent<Animator>();
         directionTimer = Random.Range(changeDirectionTimeMin, changeDirectionTimeMax);
         currentAngle = Random.Range(angleStart, angleEnd);
         MoveInCircle();
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
         // StartCoroutine(SpawnCanvasRoutine());
-
 
     }
 
@@ -86,10 +83,6 @@ public class Enemy : MonoBehaviour
                 // Pause the movement for a random amount of time
                 isMoving = false;
                 pauseTimer = Random.Range(pauseTimeMin, pauseTimeMax);
-
-                //Set the animation trigger to attack
-                // anim.SetTrigger("Attack");
-
 
                 //Spawn a prefab to throw
                 //make a list of prefabToSpawn, and choose any of them randomly
