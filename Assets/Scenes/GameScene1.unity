@@ -4151,12 +4151,13 @@ MonoBehaviour:
   source: {fileID: 622927695}
   evilSound: {fileID: 8300000, guid: d39f52e792277f14b8433ae9548e096f, type: 3}
   moveSpeed: 4
-  leftPosition: -3.7
+  leftPosition: -3
   rightPosition: 3
   middlePosition: 0
-  minDelay: 3
-  maxDelay: 6
-  attackCooldown: 2
+  minDelay: 4
+  maxDelay: 7
+  attackCooldown: 3
+  attackDuration: 1.5
 --- !u!1 &638931991
 GameObject:
   m_ObjectHideFlags: 0
@@ -11914,17 +11915,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: be6245100f149de4c8404843c369f6ed,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be6245100f149de4c8404843c369f6ed,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be6245100f149de4c8404843c369f6ed,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be6245100f149de4c8404843c369f6ed,
         type: 3}

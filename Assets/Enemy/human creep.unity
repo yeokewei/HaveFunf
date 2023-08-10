@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 469754135}
   m_Layer: 0
-  m_Name: PARENT
-  m_TagString: Untagged
+  m_Name: HumanCrawl
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1026,6 +1026,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Exo Gray@Draw Sword 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 244f5d48971895e48b3725c5101f823e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 1092408308860062549, guid: 244f5d48971895e48b3725c5101f823e,
         type: 3}
