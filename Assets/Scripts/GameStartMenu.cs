@@ -8,6 +8,7 @@ public class GameStartMenu : MonoBehaviour
     [Header("UI Pages")]
     public GameObject mainMenu;
     public GameObject about;
+    public GameObject instruction;
 
     [Header("Main Menu Buttons")]
     public Button startButton;
@@ -39,14 +40,24 @@ public class GameStartMenu : MonoBehaviour
 
     public void StartGame()
     {
-        HideAll();
+        EnabaleInstruction();
+        StartCoroutine(ExecuteAfterTime(5));
+        
+    }
+    private IEnumerator ExecuteAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
         SceneTransitionManager.singleton.GoToSceneAsync(1);
+        HideAll();
+
+        // Code to execute after the delay
     }
 
     public void HideAll()
     {
         mainMenu.SetActive(false);
         about.SetActive(false);
+        instruction.SetActive(false);
     }
 
     public void EnableMainMenu()
@@ -59,5 +70,10 @@ public class GameStartMenu : MonoBehaviour
     {
         mainMenu.SetActive(false);
         about.SetActive(true);
+    }
+
+    public void EnabaleInstruction(){
+        mainMenu.SetActive(false);
+        instruction.SetActive(true);
     }
 }

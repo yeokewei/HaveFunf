@@ -6359,6 +6359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 2061043193}
   about: {fileID: 468668564}
+  instruction: {fileID: 0}
   startButton: {fileID: 1425842248}
   aboutButton: {fileID: 473495862}
   quitButton: {fileID: 694717510}
@@ -7580,7 +7581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: a7a089c81c5d84b88b555f1922b214d2, type: 2}
+  m_Material: {fileID: 2100000, guid: 74c704a7a8fd82746bd0d259e1094de6, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}

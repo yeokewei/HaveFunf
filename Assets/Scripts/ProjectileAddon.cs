@@ -10,6 +10,8 @@ public class ProjectileAddon : MonoBehaviour
 
     private bool targetHit;
 
+    public GameObject chickenPrefab;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -32,6 +34,10 @@ public class ProjectileAddon : MonoBehaviour
 
             // destroy projectile
             Destroy(gameObject);
+            // GameObject chicken = GameObject.Find("Toon Chicken");
+            // Destroy(chicken);
+
+            // GameObject NewChicken = Instantiate(chickenPrefab);
         }
 
         // make sure projectile sticks to surface

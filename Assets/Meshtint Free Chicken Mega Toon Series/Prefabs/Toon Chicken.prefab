@@ -330,6 +330,7 @@ GameObject:
   - component: {fileID: 8009481103216045740}
   - component: {fileID: 7862446294480904125}
   - component: {fileID: 2650570115714366785}
+  - component: {fileID: 228625779510633495}
   m_Layer: 0
   m_Name: Toon Chicken
   m_TagString: Untagged
@@ -496,7 +497,8 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1258278928030394375, guid: 689c420f2b90b07439f1135454ccd5bc,
+          type: 3}
         m_TargetAssemblyTypeName: ThrowingScript, Assembly-CSharp
         m_MethodName: FireBullet
         m_Mode: 0
@@ -594,12 +596,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311290861401530}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae932990510bee24b874f48b0afdfea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 25
+  damage: 20
+  chickenPrefab: {fileID: 1311290861401530}
+--- !u!114 &228625779510633495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311290861401530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dab099f16400c44fb283db46b5cf331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chickenAnimator: {fileID: 95943282229431942}
 --- !u!1 &1325880688823160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,7 +1151,7 @@ Transform:
   m_GameObject: {fileID: 8443587626172583012}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.065, y: 0.019, z: 0}
+  m_LocalPosition: {x: -0.065, y: 0.045, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
